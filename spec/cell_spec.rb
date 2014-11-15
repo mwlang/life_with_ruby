@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe "Cell" do 
   let(:board) do 
-    b = Board.new 
+    b = Board.new(40) 
     b.cells[1].alive = true
     b
   end

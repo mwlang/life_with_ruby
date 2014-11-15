@@ -15,6 +15,6 @@ RSpec.describe "Board" do
   end
   
   it "should initialize with cells" do
-    expect(subject.cells.first).to be kind_of(Cell)
+    expect(subject.cells.first).to be_kind_of(Cell)
   end
 end

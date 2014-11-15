@@ -1,22 +1,25 @@
-# Tim Conway's Game of Life in CoffeeScript
+# Tim Conway's Game of Life in Ruby
 
-Inspired by a [Jonathan Wallace](https://github.com/wallace)'s invite to a local [Code Retreat](http://coderetreat.org/about) (that I could not attend)
-where the gathered developers were going to focus on Tim Conway's Game of Life, I decided to embark on a self-study of CoffeeScript where 
-my skills are relatively weak.
+This Ruby implementation of Tim Conway's Game of Life was built during a local 
+[Code Retreat](http://coderetreat.org/about) in Athens, Georgia November 15, 2014.
 
-This is the results of my implementing the Game of Life in CoffeeScript and you'll find the code directly in source/javascripts/game.js.coffeescript 
-and you can read more about the code and effort [with this blog post](http://ramblings.gibberishcode.net/archives/conways-game-of-life-in-coffeescript/125)
+This project was implemented with Ruby 2.x development environment with Rspec 3.0 for testing.  
 
-This project was implemented with [Middleman 3.x](http://middlemanapp.com/) in a Ruby 2.0 development environment.  Follow the Middleman Getting Started 
-guide to install Middleman then launch the app with:
+To run the tests simply type "rspec" on the command line.  To run the app, type "ruby run.rb"
 
-  ```middleman server```
+This app in its current form makes a slight change to the general rules which we were using to explore 
+changing the program after it was written.  The rule calls for allowing cells that are dying to linger on and 
+influence the board an extra turn.  So a cell that is "dying" is still alive for an extra round and can influence
+both birthing of new cells as well as triggering overcrowding die-offs.
+
+To watch the game in the browser, simply open the board.html file after starting "ruby run.rb"  The browser should 
+auto-refresh itself due to the refresh meta-key tag being set in the HEAD section of the generated HTML document.
 
 ---
 
 ##### LICENSE #####
 
-Copyright (c) 2013 Michael Lang
+Copyright (c) 2014 Michael Lang
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
